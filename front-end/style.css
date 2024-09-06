@@ -1,0 +1,313 @@
+/*Fontes utilizadas*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+/*Cor do texto com gradient */
+.gradient-text {
+    background: linear-gradient(45deg, #ff69b4, #9e0491, #8a2be2);
+    background-size: 400% 100%;
+    animation: gradient 10s linear infinite alternate;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Source Code Pro", monospace;
+  }
+
+
+  /*Linha de separação */
+  .line {
+    width: 50%; 
+    border: 0; 
+    height: 1px; 
+    background-color: #ffffff; 
+    margin: 20px auto; 
+}
+
+/*Corpo do projeto */
+body{
+    background-color: #1d1c1d ;
+    color: white;
+}
+
+/*Texto principal da página*/
+.presentation{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+/*Texto da h1*/
+.presentation h1{
+    font-family: "Outfit", sans-serif;
+    font-size: 80px;
+    font-weight: 600;
+}
+
+/*Texto da h4*/
+.presentation h4{
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/*Animações*/
+.animation-left {
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
+    width: 90px;
+    height: 90px;
+    background-color: #8a2be2;
+    border-radius: 50%;
+    animation: moveLeft 3s infinite alternate; 
+}
+
+.animation-right {
+    position: absolute;
+    bottom: 20px; 
+    right: 20px; 
+    width: 90px;
+    height: 90px;
+    background-color: #9e0491;
+    border-radius: 50%;
+    animation: moveRight 3s infinite alternate; 
+}
+
+/* Definindo Keyframes para as animações */
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(30px); 
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-30px); 
+    }
+}
+
+/* Sobre mim */
+.aboutme {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: left; 
+    height: 100vh;
+    gap: 80px; 
+}
+
+/* Estilo da imagem */
+.img {
+    max-width: 300px; 
+    height: auto;
+    border-radius: 10px; 
+}
+
+/* Contêiner de texto */
+.aboutme-text {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+/* Texto da h1 */
+.aboutme h1 {
+    font-size: 70px;
+    margin: 0; 
+    padding-bottom: 10px; 
+}
+
+/* Estilo dos itens da lista no h3 */
+.aboutme h3 {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.aboutme h3 li {
+    margin: 10px 0; 
+}
+
+/*Social midia */
+.social-links {
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    margin-top: 20px; 
+}
+
+.social-links img {
+    width: 40px; 
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.social-links a {
+    text-decoration: none; 
+}
+
+.social-links a:hover img {
+    transform: scale(1.1); 
+}
+
+.skills{
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center;
+    margin-top: 5%; 
+    margin-bottom: 3%;
+}
+
+.container-card{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; 
+    padding: 20px;
+    margin-bottom: 6%;
+}
+
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do card quando o mouse passa sobre ele */
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3), /* #ff69b4 - rosa */
+                0 4px 10px rgba(158, 4, 145, 0.3),  /* #9e0491 - roxo escuro */
+                0 4px 10px rgba(138, 43, 226, 0.3);  /* #8a2be2 - azul */
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.icons img {
+    width: 54px;
+    height: 54px;
+}
+
+.projects{
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center;
+    margin-top: 6%; 
+    margin-bottom: 3%;
+}
+
+@media (max-width: 1200px) {
+    .presentation h1 {
+        font-size: 4rem;
+    }
+
+    .skills h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .animation-left, .animation-right {
+        display: none; /* Remove animações em telas menores */
+    }
+
+    .container-card .card {
+        flex: 1 1 calc(50% - 1rem);
+    }
+
+    .aboutme {
+        text-align: center;
+    }
+
+    .aboutme img {
+        display: none; /* Remove a imagem em telas menores */
+    }
+
+    .social-links img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .presentation h1 {
+        font-size: 1.5rem;
+    }
+
+    .skills h1 {
+        font-size: 1.25rem;
+    }
+
+    .container-card .card {
+        flex: 1 1 calc(50% - 1rem);
+    }
+
+    .aboutme-text ul {
+        padding-left: 0;
+    }
+
+    .aboutme-text li {
+        list-style: none;
+        font-size: 0.875rem;
+    }
+
+    .social-links img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .card-body {
+        padding: 0.75rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .presentation h1 {
+        font-size: 2rem;
+    }
+
+    .skills h1 {
+        font-size: 1.125rem;
+    }
+
+    .card-body {
+        padding: 0.5rem;
+    }
+
+    .card-title {
+        font-size: 0.875rem;
+    }
+
+    .card-text {
+        font-size: 0.75rem;
+    }
+}
+
+

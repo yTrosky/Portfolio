@@ -105,7 +105,7 @@ body{
 
 /* Estilo da imagem */
 .img {
-    max-width: 300px; 
+    max-width: 400px; 
     height: auto;
     border-radius: 10px; 
 }
@@ -215,6 +215,7 @@ body{
     margin-bottom: 3%;
 }
 
+/* Responsividade */
 @media (max-width: 1200px) {
     .presentation h1 {
         font-size: 4rem;
@@ -222,6 +223,12 @@ body{
 
     .skills h1 {
         font-size: 2rem;
+    }
+
+    .aboutme img {
+        margin: 0 auto; 
+        display: block; 
+        padding: 0 1rem; 
     }
 }
 
@@ -307,6 +314,33 @@ body{
 
     .card-text {
         font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .presentation h1 {
+        font-size: 1.5rem;
+    }
+
+    .skills h1 {
+        font-size: 1rem;
+    }
+
+    .card-body {
+        padding: 0.25rem;
+    }
+
+    .card-title {
+        font-size: 0.75rem;
+    }
+
+    .card-text {
+        font-size: 0.625rem;
+    }
+
+    .social-links img {
+        width: 16px;
+        height: 16px;
     }
 }
 
